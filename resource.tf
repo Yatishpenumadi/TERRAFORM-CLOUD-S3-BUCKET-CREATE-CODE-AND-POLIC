@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "storage-bucket" {
+resource "aws_s3_bucket" "sub-bucket" {
   bucket = "my-sb-bucket"
   tags = {
     Name        = "MY BUCKET"
