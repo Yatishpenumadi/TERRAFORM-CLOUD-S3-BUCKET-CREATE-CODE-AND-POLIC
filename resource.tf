@@ -6,7 +6,7 @@ resource "aws_s3_bucket" "sub-bucket" {
   }
 }
 resource "aws_s3_bucket_policy" "allow_access_from_public" {
-  bucket = aws_s3_bucket.storage-bucket.id
+  bucket = aws_s3_bucket.sub-bucket.id
   policy = data.aws_iam_policy_document.allow_access_from_public.json
 }
 
